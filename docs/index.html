@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="키보드와 터치로 즐기는 클래식 벽돌 깨기 게임" />
+  <title>Brick Blast</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="app">
+    <section class="game-card">
+      <header>
+        <div><p class="eyebrow">ARCADE CLASSIC</p><h1>BRICK <em>BLAST</em></h1></div>
+        <button id="theme" class="theme" type="button" aria-label="테마 전환">☀ 라이트</button>
+        <div class="stats"><span>점수 <b id="score">0000</b></span><span>목숨 <b id="lives">●●●</b></span></div>
+      </header>
+      <div class="screen"><canvas id="game" width="400" height="430" aria-label="벽돌 깨기 게임"></canvas><p class="hint">← → 또는 A · D를 누르고 있으면 부드럽게 이동합니다</p></div>
+      <footer>
+        <div><p id="message" aria-live="polite">시작 버튼을 눌러 도전하세요!</p><label>플레이어 이름 <input id="name" maxlength="12" value="플레이어" /></label></div>
+        <button id="start" class="start" type="button">게임 시작 <span>▶</span></button>
+      </footer>
+      <section class="ranking" aria-label="최고 기록 랭킹"><div><h2>🏆 최고 기록 랭킹</h2><small>상위 5개 기록은 이 브라우저에 저장됩니다</small></div><ol id="ranks"></ol></section>
+    </section>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
